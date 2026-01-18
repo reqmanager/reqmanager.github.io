@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReqMan - Requirements Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="theme-prefetch.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="o-main-content">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Requirement Manager (ReqMan)</h1>
+                <p class="subtitle">A comprehensive web-based requirements and test management system</p>
+                <div class="badge-container">
+                    <a href="https://app.codacy.com/gh/reqmanager/ReqMan/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="https://app.codacy.com/project/badge/Grade/972f03dc70864d4e807afd7d2adcd1b0"
+                            alt="Codacy Badge" class="codacy-badge">
+                    </a>
+                </div>
+            </div>
+            <button data-theme-toggle class="theme-toggle c-theme-toggle" type="button" aria-label="Toggle dark mode"
+                aria-pressed="false" title="Toggle dark mode">
+                <span class="theme-toggle-icon theme-toggle-icon-sun c-theme-toggle__icon c-theme-toggle__icon--sun"
+                    aria-hidden="true">☀</span>
+                <span class="theme-toggle-icon theme-toggle-icon-moon c-theme-toggle__icon c-theme-toggle__icon--moon"
+                    aria-hidden="true">🌙</span>
+            </button>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>About ReqMan</h2>
+                </div>
+                <div class="c-card__body">
+                    <p class="c-card__text">
+                        ReqMan is a comprehensive web-based requirements and test management system built with Rust,
+                        Rocket, and PostgreSQL.
+                        This software provides a complete solution for managing hierarchical requirements, tests,
+                        traceability matrices, and generating reports.
+                    </p>
+                    <p class="c-card__text">
+                        Whether you're managing software requirements, system specifications, or test cases, ReqMan
+                        offers a modern,
+                        intuitive interface with powerful features for organizing, tracking, and reporting on your
+                        project's requirements and tests.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>✨ Features</h2>
+                </div>
+                <div class="c-card__body">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3>📋 Core Management</h3>
+                            <ul>
+                                <li><strong>Multi-Project Support:</strong> Manage multiple projects with isolated data
+                                </li>
+                                <li><strong>Requirements Management:</strong> Create, edit, and organize hierarchical
+                                    requirements</li>
+                                <li><strong>Test Management:</strong> Manage tests with status tracking and source
+                                    documentation</li>
+                                <li><strong>Traceability Matrix:</strong> Visual mapping between requirements and tests
+                                </li>
+                                <li><strong>User Management:</strong> Assign authors and reviewers to requirements with
+                                    authentication</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <h3>🏷️ Advanced Features</h3>
+                            <ul>
+                                <li><strong>Categories:</strong> User-defined categories for organizing requirements
+                                    (project-specific)</li>
+                                <li><strong>Applicability:</strong> Define product lines, system types, or project
+                                    scopes (project-specific)</li>
+                                <li><strong>Status Tracking:</strong> Track requirement status (Draft, Accepted,
+                                    Rejected, etc.)</li>
+                                <li><strong>Verification Methods:</strong> Specify verification types (Test, Analysis,
+                                    Review, etc.)</li>
+                                <li><strong>Authentication:</strong> Secure login system with password management</li>
+                                <li><strong>Project Isolation:</strong> Data separation between different projects</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <h3>📊 Reporting & Export</h3>
+                            <ul>
+                                <li><strong>Excel Export:</strong> Export requirements with all fields to Excel format
+                                </li>
+                                <li><strong>Matrix Export:</strong> Export traceability matrix to Excel</li>
+                                <li><strong>Comprehensive Data:</strong> All metadata included in exports (categories,
+                                    applicability, dates, etc.)</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <h3>🎨 Modern UI</h3>
+                            <ul>
+                                <li><strong>Responsive Design:</strong> Works on desktop and mobile devices</li>
+                                <li><strong>Modern Interface:</strong> Clean, card-based layout with consistent styling
+                                </li>
+                                <li><strong>Intuitive Navigation:</strong> Easy-to-use interface with clear visual
+                                    hierarchy</li>
+                                <li><strong>Professional Styling:</strong> Consistent color scheme and typography</li>
+                                <li><strong>Dark Mode:</strong> Full dark mode support with theme persistence</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <h3>🔌 API Access</h3>
+                            <ul>
+                                <li><strong>RESTful API:</strong> Complete programmatic access to all data</li>
+                                <li><strong>JSON Format:</strong> Standard JSON responses for integration</li>
+                                <li><strong>CRUD Operations:</strong> Full Create, Read, Update, Delete support</li>
+                                <li><strong>Project-Scoped:</strong> All API operations respect project boundaries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>📸 Screenshots</h2>
+                </div>
+                <div class="c-card__body">
+                    <p class="c-card__text">
+                        Get a glimpse of ReqMan's modern interface and powerful features:
+                    </p>
+                    <div class="screenshots-gallery">
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/dashboard.png" alt="ReqMan Dashboard" class="screenshot-image"
+                                    loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Dashboard - Overview of projects and requirements</p>
+                                </div>
+                            </div>
+                            <h4>Dashboard</h4>
+                            <p class="screenshot-description">Main dashboard showing project overview and quick access
+                                to key features</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/requirements.png" alt="Requirements Management"
+                                    class="screenshot-image" loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Requirements Management - Hierarchical view</p>
+                                </div>
+                            </div>
+                            <h4>Requirements Management</h4>
+                            <p class="screenshot-description">Create, edit, and organize hierarchical requirements with
+                                full metadata</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/matrix.png" alt="Traceability Matrix" class="screenshot-image"
+                                    loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Traceability Matrix - Requirements to Tests mapping
+                                    </p>
+                                </div>
+                            </div>
+                            <h4>Traceability Matrix</h4>
+                            <p class="screenshot-description">Visual mapping between requirements and tests with status
+                                indicators</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/requirement-detail.png" alt="Requirement Detail View"
+                                    class="screenshot-image" loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Requirement Detail - Full requirement information</p>
+                                </div>
+                            </div>
+                            <h4>Requirement Detail</h4>
+                            <p class="screenshot-description">Detailed view of individual requirements with all metadata
+                                and relationships</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/tests.png" alt="Test Management" class="screenshot-image"
+                                    loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Test Management - Organize and track test cases</p>
+                                </div>
+                            </div>
+                            <h4>Test Management</h4>
+                            <p class="screenshot-description">Manage test cases with status tracking and source
+                                documentation</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-container">
+                                <img src="screenshots/categories.png" alt="Categories Management"
+                                    class="screenshot-image" loading="lazy">
+                                <div class="screenshot-overlay">
+                                    <p class="screenshot-caption">Categories - Organize requirements by category</p>
+                                </div>
+                            </div>
+                            <h4>Categories & Applicability</h4>
+                            <p class="screenshot-description">Define custom categories and applicability options for
+                                your project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>🚀 Quick Start</h2>
+                </div>
+                <div class="c-card__body">
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li><strong>PostgreSQL:</strong> Database backend (provided via Docker)</li>
+                        <li><strong>Docker & Docker Compose:</strong> For database containerization</li>
+                        <li><strong>Rust:</strong> Programming language</li>
+                        <li><strong>clang / libclang-dev:</strong> Required by <code>xlsxwriter</code></li>
+                    </ul>
+
+                    <h3>Installation</h3>
+                    <p class="c-card__text">For a fully initialized database with pre-configured users and sample data:
+                    </p>
+                    <ol>
+                        <li>Start database: <code>docker compose up -d db</code></li>
+                        <li>Initialize DB with sample data: <code>./scripts/setup_database.sh</code></li>
+                        <li>Start app: <code>cargo run --bin req_man</code></li>
+                    </ol>
+                    <p class="c-card__text">Then open <strong>http://localhost:8000</strong> in your browser (all demo
+                        users use password <code>password</code>).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Manual Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>📖 User Manual</h2>
+                </div>
+                <div class="c-card__body">
+                    <h3>Web Interface</h3>
+                    <div class="manual-section">
+                        <h4>Requirements Management</h4>
+                        <p class="c-card__text">
+                            Navigate to <code>/requirements</code> to view and manage requirements. You can:
+                        </p>
+                        <ul>
+                            <li>Create new requirements with hierarchical structure</li>
+                            <li>Edit existing requirements inline or via detail page</li>
+                            <li>Filter and search requirements</li>
+                            <li>Assign categories, applicability, authors, and reviewers</li>
+                            <li>Track requirement status</li>
+                            <li>View requirement hierarchy in tree format</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>Test Management</h4>
+                        <p class="c-card__text">
+                            Go to <code>/tests</code> to manage test cases. Features include:
+                        </p>
+                        <ul>
+                            <li>Create and organize test cases</li>
+                            <li>Link tests to requirements via traceability matrix</li>
+                            <li>Track test status and results</li>
+                            <li>Document test sources and verification methods</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>Traceability Matrix</h4>
+                        <p class="c-card__text">
+                            Visit <code>/matrix</code> to view the traceability matrix. This provides:
+                        </p>
+                        <ul>
+                            <li>Visual mapping between requirements and tests</li>
+                            <li>Status indicators for each requirement-test link</li>
+                            <li>Filtering and search capabilities</li>
+                            <li>Export functionality to Excel</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>Categories & Applicability</h4>
+                        <p class="c-card__text">
+                            Manage project-specific metadata:
+                        </p>
+                        <ul>
+                            <li><strong>Categories:</strong> Access <code>/categories</code> to create and manage
+                                requirement categories</li>
+                            <li><strong>Applicability:</strong> Visit <code>/applicability</code> to define product
+                                lines, system types, or project scopes</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>Export Features</h4>
+                        <ul>
+                            <li><strong>Requirements Export:</strong> Click "Export Excel" on the requirements page or
+                                homepage</li>
+                            <li><strong>Matrix Export:</strong> Click "Export Excel" on the matrix page</li>
+                            <li><strong>File Format:</strong> Downloads as <code>.xls</code> files with all metadata
+                                included</li>
+                        </ul>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>Import Features</h4>
+                        <ul>
+                            <li><strong>Excel Parser:</strong> Standalone application to parse exported Excel files and
+                                import data via API</li>
+                            <li><strong>Data Import:</strong> Import requirements, tests, and traceability data from
+                                Excel files</li>
+                            <li><strong>API Integration:</strong> Seamless integration with the main application's REST
+                                API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Reference Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>🔌 API Reference</h2>
+                </div>
+                <div class="c-card__body">
+                    <h3>Base URL</h3>
+                    <pre><code>http://localhost:8000/api/v1</code></pre>
+
+                    <h3>Endpoints</h3>
+                    <div class="api-endpoints">
+                        <div class="endpoint-group">
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li><code>GET /requirements</code> - List all requirements</li>
+                                <li><code>GET /requirements/{id}</code> - Get specific requirement</li>
+                                <li><code>POST /requirements</code> - Create new requirement</li>
+                                <li><code>PATCH /requirements/{id}</code> - Partially update supported requirement
+                                    fields</li>
+                                <li><code>DELETE /requirements/{id}</code> - Delete requirement</li>
+                            </ul>
+                        </div>
+                        <div class="endpoint-group">
+                            <h4>Tests</h4>
+                            <ul>
+                                <li><code>GET /tests</code> - List all tests</li>
+                                <li><code>GET /tests/{id}</code> - Get specific test</li>
+                                <li><code>POST /tests</code> - Create new test</li>
+                                <li><code>DELETE /tests/{id}</code> - Delete test</li>
+                            </ul>
+                        </div>
+                        <div class="endpoint-group">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><code>GET /categories</code> - List all categories</li>
+                                <li><code>GET /categories/{id}</code> - Get specific category</li>
+                                <li><code>POST /categories</code> - Create new category</li>
+                                <li><code>PUT /categories/{id}</code> - Update category</li>
+                                <li><code>DELETE /categories/{id}</code> - Delete category</li>
+                            </ul>
+                        </div>
+                        <div class="endpoint-group">
+                            <h4>Applicability</h4>
+                            <ul>
+                                <li><code>GET /applicability</code> - List all applicability options</li>
+                                <li><code>GET /applicability/{id}</code> - Get specific applicability</li>
+                                <li><code>POST /applicability</code> - Create new applicability</li>
+                                <li><code>PUT /applicability/{id}</code> - Update applicability</li>
+                                <li><code>DELETE /applicability/{id}</code> - Delete applicability</li>
+                            </ul>
+                        </div>
+                        <div class="endpoint-group">
+                            <h4>Matrix</h4>
+                            <ul>
+                                <li><code>GET /matrix</code> - Get traceability matrix data</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Example API Usage</h3>
+                    <pre><code># Get all requirements
+curl http://localhost:8000/api/v1/requirements
+
+# Create a new category
+curl -X POST http://localhost:8000/api/v1/categories \
+  -H "Content-Type: application/json" \
+  -d '{"title": "API", "description": "API requirements", "tag": "API"}'
+
+# Export requirements to Excel
+curl -O http://localhost:8000/requirements.xls</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>🛠️ Technology Stack</h2>
+                </div>
+                <div class="c-card__body">
+                    <ul>
+                        <li><strong>Backend:</strong> Rust with Rocket web framework</li>
+                        <li><strong>Database:</strong> PostgreSQL with Diesel ORM</li>
+                        <li><strong>Frontend:</strong> Handlebars templates with custom CSS</li>
+                        <li><strong>Reports:</strong> Excel generation with xlsxwriter</li>
+                        <li><strong>Containerization:</strong> Docker for database</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section class="content-section">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h2>🔗 Resources</h2>
+                </div>
+                <div class="c-card__body">
+                    <ul>
+                        <li><a href="https://github.com/reqmanager/ReqMan" target="_blank"
+                                rel="noopener noreferrer">GitHub Repository</a></li>
+                        <li><a href="https://github.com/reqmanager/ReqMan/blob/main/README.md" target="_blank"
+                                rel="noopener noreferrer">Full Documentation</a></li>
+                        <li><a href="https://github.com/reqmanager/ReqMan/blob/main/DATABASE_SETUP_README.md"
+                                target="_blank" rel="noopener noreferrer">Database Setup Guide</a></li>
+                        <li><a href="https://github.com/reqmanager/ReqMan/blob/main/LICENSE" target="_blank"
+                                rel="noopener noreferrer">License</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2024 ReqMan - Requirements Management System</p>
+            <p class="footer-text">This project is open source. See LICENSE file for details.</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="theme.js"></script>
+</body>
+
+</html>
